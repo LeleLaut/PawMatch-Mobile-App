@@ -1,36 +1,27 @@
-import React, { useState } from 'react';
-import {Button, Text, TextInput, View} from 'react-native';
-
-interface Mahasiswa {
-  namaMahasiswa: string;
-  Prodi: string;
-}
-
-const Mahasiswa = (props: Mahasiswa) => {
-  return (
-    <View>
-      <Text>Halo saya {props.namaMahasiswa} dari {props.Prodi}</Text>
-    </View> 
-  );
-}
+import React from 'react';
+import { Button, Text, TextInput, View, ScrollView, StyleSheet, FlatList } from 'react-native';
 
 const App = () => {
-  const [waktu,setWaktu] = useState("Belum Waktu Berbuka");
-  const [inputNama ,setInputNama] = useState("");
   return (
-    <View>
-      <Text>Sekarang {waktu}</Text>
-      <Button 
-      title='Ubah Waktu'
-      onPress = {() => {setWaktu("Sudah Waktunya berbuka")}}
-      />
-      <Mahasiswa namaMahasiswa="Rizky" Prodi="S1 Teknik Komputer" />
-      <TextInput 
-        onChangeText={(text) => {setInputNama(text)}}
-        />
-        <Text>{inputNama}</Text>
-    </View>
+    <View style={{flex:1}}>
+    <View style={{
+      backgroundColor: '#fff',
+    flex:1,
+    }}>
+        <Text style={{
+          fontSize: 24,
+          fontWeight: 'bold',
+          color:"black",
+        }}>My App Header</Text>
+      </View>
+      <View style = {{
+        backgroundColor:'#555', flex:1
+      }}>
+        <Text>Jancok</Text>
+      </View>
+      </View>
   );
 };
+
 
 export default App;
