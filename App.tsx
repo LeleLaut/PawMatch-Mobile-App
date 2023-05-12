@@ -8,6 +8,7 @@ const App = () => {
       backgroundColor: '#fff',
     flex:1,
     }}>
+    
         <Text style={{
           fontSize: 24,
           fontWeight: 'bold',
